@@ -51,22 +51,34 @@ export const Todo = () => {
 
   const checkActiveIndexForItems = () => {
     if (activeIndex === 1) {
-      if (data?.length === 1) {
-        return `${data?.length} item left`;
+      if (data) {
+        if (data?.length === 1) {
+          return `${data?.length} item left`;
+        } else {
+          return `${data?.length} items left`;
+        }
       } else {
-        return `${data?.length} items left`;
+        return `- items left`;
       }
     } else if (activeIndex === 2) {
-      if (data?.length === 1) {
-        return `${activeData?.length} item left`;
+      if (activeData) {
+        if (data?.length === 1) {
+          return `${activeData?.length} item left`;
+        } else {
+          return `${activeData?.length} items left`;
+        }
       } else {
-        return `${activeData?.length} items left`;
+        return `- items left`;
       }
     } else {
-      if (data?.length === 1) {
-        return `${completedData?.length} item left`;
+      if (completedData) {
+        if (data?.length === 1) {
+          return `${completedData?.length} item left`;
+        } else {
+          return `${completedData?.length} items left`;
+        }
       } else {
-        return `${completedData?.length} items left`;
+        return `- items left`;
       }
     }
   };
