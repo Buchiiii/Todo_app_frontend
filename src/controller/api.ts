@@ -4,16 +4,8 @@ import { Task, Tasks } from "../utils/Task";
 export const API = createApi({
   reducerPath: "API",
   tagTypes: ["Todos"],
-  // refetchOnFocus: true,
-  // refetchOnMountOrArgChange: true,
-  // refetchOnReconnect: true,
   baseQuery: fetchBaseQuery({
     baseUrl: process.env.REACT_APP_URL,
-    // prepareHeaders: (headers) => {
-    //   headers.set("Access-Control-Allow-Origin", "*");
-    //   headers.set("Content-type", "application/json");
-    //   return headers
-    // },
   }),
   endpoints: (builder) => ({
     getData: builder.query<Tasks, void>({
