@@ -8,8 +8,7 @@ export const API = createApi({
   // refetchOnMountOrArgChange: true,
   // refetchOnReconnect: true,
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:2000/"
-    // baseUrl: process.env.REACT_APP_URL,
+    baseUrl: process.env.REACT_APP_URL,
     // prepareHeaders: (headers) => {
     //   headers.set("Access-Control-Allow-Origin", "*");
     //   headers.set("Content-type", "application/json");
