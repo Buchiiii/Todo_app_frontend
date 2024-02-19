@@ -7,7 +7,15 @@ export const API = createApi({
   // refetchOnFocus: true,
   // refetchOnMountOrArgChange: true,
   // refetchOnReconnect: true,
-  baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_URL }),
+  baseQuery: fetchBaseQuery({
+    baseUrl: "http://localhost:2000/"
+    // baseUrl: process.env.REACT_APP_URL,
+    // prepareHeaders: (headers) => {
+    //   headers.set("Access-Control-Allow-Origin", "*");
+    //   headers.set("Content-type", "application/json");
+    //   return headers
+    // },
+  }),
   endpoints: (builder) => ({
     getData: builder.query<Tasks, void>({
       query: () => `getTasks`,

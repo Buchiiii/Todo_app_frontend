@@ -1,0 +1,5 @@
+@media(max-width: 400px ){
+    .mydiv{
+        width: 200px;
+    }
+}
